@@ -1,0 +1,328 @@
+
+#back{  position:absolute;
+	margin-top:0px;
+	background-image:url(ad2.jpg);
+	height:500px;
+	text-align:center;
+	background-size:cover;	
+	width:100%
+}
+
+
+#back1{
+	margin-top:60px;
+	background-image:url(ad1.jpg);
+	height:40px;
+	text-align:center;
+	background-size:cover;	
+	width:100%
+}
+
+
+
+.wrapper.nav-wrapper {
+    background: #000 none repeat scroll 0% 0%;
+        background-color: #000;
+        background-image: none;
+        background-repeat: repeat;
+        background-attachment: scroll;
+        background-position: 0% 0%;
+        background-clip: border-box;
+        background-origin: padding-box;
+        background-size: auto auto;
+    color: #FFF;
+}
+.nav-wrapper {
+    height: 40px;
+    background: #DDD none repeat scroll 0% 0%;
+        background-color: #DDD;
+        background-image: none;
+        background-repeat: repeat;
+        background-attachment: scroll;
+        background-position: 0% 0%;
+        background-clip: border-box;
+        background-origin: padding-box;
+        background-size: auto auto;
+}
+.wrapper {
+    position: relative;
+}
+
+
+
+.container {
+    position: relative;
+    margin: 0px auto;
+        margin-top: 0px;
+        margin-right: auto;
+        margin-bottom: 0px;
+        margin-left: auto;
+    display: block;
+    max-width: 1180px;
+}
+
+
+.nav-wrapper ul li {
+    display: block;
+    float: left;
+    position: relative;
+}
+
+
+ul li a:focus, .nav-wrapper ul li.active a {
+    background: #333 none repeat scroll 0% 0%;
+}
+.nav-wrapper ul li:first-child a {
+    padding: 0px 23px !important;
+}
+.nav-wrapper ul li a {
+    color: #FFF;
+}
+.nav-wrapper ul li a {
+    padding: 0px 13px;
+    display: block;
+    line-height: 40px;
+}
+a {
+    color: #686868;
+}
+a {
+    margin: 0px;
+    padding: 0px;
+    vertical-align: baseline;
+    text-decoration: none;
+    outline: medium none;
+    transition: all 0.2s ease-in-out 0s;
+}
+
+
+
+
+
+.nav-container ul#nav {
+    float: left;
+}
+ul {
+    list-style: outside none none;
+        list-style-type: none;
+        list-style-image: none;
+        list-style-position: outside;
+}
+
+
+
+
+
+.fa-home::before {
+    content: "";
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0px;
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-bottom: 0px;
+        margin-left: 0px;
+    padding: 0px;
+        padding-top: 0px;
+        padding-right: 0px;
+        padding-bottom: 0px;
+        padding-left: 0px;
+}
+.nav-wrapper ul li:first-child a i {
+    font-size: 20px;
+}
+.fa {
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    font-size-adjust: none;
+    font-stretch: normal;
+    font-feature-settings: normal;
+    font-language-override: normal;
+    font-kerning: auto;
+    font-synthesis: weight style;
+    font-variant: normal;
+        font-variant-alternates: normal;
+        font-variant-caps: normal;
+        font-variant-east-asian: normal;
+        font-variant-ligatures: normal;
+        font-variant-numeric: normal;
+        font-variant-position: normal;
+    font-size: inherit;
+}
+.nav-wrapper ul li a {
+    color: #FFF;
+}
+.nav-wrapper ul li a {
+    line-height: 40px;
+}
+a {
+    color: #686868;
+}
+ul {
+    list-style: outside none none;
+}
+.wrapper.nav-wrapper {
+    color: #FFF;
+}
+body {
+    font-family: "Open Sans",sans-serif;
+    font-weight: 400;
+    color: #484848;
+    font-size: 14px;
+}
+
+
+.dropdown {
+    position: absolute;
+    display: inline-block;
+    margin-left:-90px;
+    min-width: 180px;
+    border-bottom: 1px solid transparent
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    background-color: white;
+    min-width: 180px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: #F58220;
+    font-weight:700;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: lightgrey}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+
+}
+
+
+
+
+
+
+.services-container {
+    position: absolute;
+    padding-left:0px;
+    padding-right:0px;
+    margin-left:-10px;
+    margin-right:0px;
+}
+
+}
+element {
+    font-size: 100%;
+}
+body {
+    font-family: "Open Sans",sans-serif;
+    font-weight: 400;
+    color: #484848;
+    font-size: 14px;
+}
+
+
+
+
+
+
+h2.index-title {
+	text-align:center;
+	font-size:30px;
+	margin-top:10px;
+	color:white;
+	font-weight:500;
+	text-transform:uppercase;
+	padding-bottom:10px;
+}
+.services-container {
+	position:relative;
+}
+.service-item {
+	position:relative;
+	padding:40px 10px 10px 10px;
+	border:1px solid transparent;
+	width:24%;
+	float:left;
+	margin-left:10px;
+	text-align:center;
+	transition:all 0.3s ease-in-out;
+	min-height:320px;
+}
+.service-item:hover, .service-item:focus {
+	border-color:#e5e5e5;
+	-webkit-box-shadow: 0px 5px 10px -7px rgba(0, 0, 0, 0.70);
+	-moz-box-shadow: 0px 5px 10px -7px rgba(0, 0, 0, 0.70);
+	box-shadow: 0px 2px 8px -2px rgba(0, 0, 0, 0.70);
+	z-index:1000;
+}
+.service-item h3 {
+	font-size:36px;
+	font-weight:700;
+	color:#000;
+	line-height:36px;
+}
+.service-item h4 {
+	font-size:18px;
+	color:#000;
+	
+}
+.service-item p {
+	padding-top:20px;
+	min-height:130px;
+	padding-bottom:0px;
+}
+.service-item.service-item-1 {
+	background: #FFF;
+}
+.service-item.service-item-2 {
+	background: #FFF;
+}
+.service-item.service-item-3 {
+	background: #FFF;
+}
+.service-item.service-item-4 {
+	background: #FFF;
+}
+a.bttn-more {
+	color:#F58220;
+	display:inline-block;
+	margin-top:10px;
+	border:1px solid #dadada;
+	padding:10px 30px;
+	font-weight:600;
+	border-radius:2px;
+}
+a.bttn-more:hover {
+	border-color:#CCC;
+}
+
+.footer-bottom-wrapper {
+	position:relative;
+	padding:15px 0px;
+	margin-top:335px;
+	background:#293035;
+	border-top:1px solid #3b444a;
+	width:100%;
+	height:100px;
+}
+
+

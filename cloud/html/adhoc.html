@@ -1,0 +1,206 @@
+<html>
+<body>
+<head>
+<title> ADHOC SOLUTIONS</title>
+
+<style type="text/css">
+body{
+	font-family:Arial, sans-serief;
+	background-color:#E5E5E5;
+	margin:0px;
+	padding:0px;
+}
+
+div.loginBox
+{
+	display: block;
+	position:relative;
+	margin-top:10%;	
+	text-align:center;
+}
+.noteDiv{
+	color:gray;
+	font-family:Arial;
+	width:395px;
+	text-align:left;
+	margin:0px auto;
+	font-size:14px;
+}
+#note{
+	display:inline-block;
+	vertical-align:top;
+	_display:inline;
+	_zoom:1;
+	width:50px;
+	font-weight:bold;
+}
+#tip{
+	display:inline-block;
+	vertical-align:top;
+	_display:inline;
+	_zoom:1;
+	width:340px;
+	font-weight:bold;
+}
+div.panelThre{
+	margin-top:10px;
+}
+div.picDiv{
+	width:395px;
+	height:276px;
+	background-image:url(../images/loginbg.png);
+	position:relative;
+}
+input.pcPassword{
+	width:300px;
+	height:50px;
+	line-height:50px;
+	padding-left:20px;
+}
+div.PCBtnDiv{
+	position:relative;
+	margin-top:20px;
+}
+img.logoPic{
+	width:100%;
+}
+
+#copyright {
+    font-size: 10px;
+    color: #6A6969;
+    font-family: "Verdana";
+    font-weight: normal;
+    margin-top: 40px;
+    display: inline-block;
+}
+
+.topLogo{
+	background:url(../login/top_bg.jpg);
+	height:90px;
+}
+.style1 {
+	font-family: "Arial";
+	color: #FFFFFF;
+	font-size: 25px;
+	padding-right: 50;
+	text-align: right;
+	font-weight: bold;
+	white-space: nowrap;
+}
+.style2 {
+	font-size: 12px;
+	font-family: "Arial";
+	font-weight: bold;
+	padding-right: 50;
+	text-align: right;
+	white-space: nowrap;
+	color: #FFFFFF;
+}
+ul{
+	padding:60px 0px 0px 0px;
+	margin:0px;
+	list-style:none;
+}
+ul li{
+	height:34px;
+	width:222px;
+}
+li.unLi{
+	background:url(../login/loginUser.png);
+}
+li.pwLi{
+	background:url(../login/loginPwd.png);
+}
+li.blank{
+	height:15px;
+}
+input.text{
+	border:0px;
+	height:26px;
+	line-height:26px;
+	width:175px;
+	padding:0px;
+	margin:4px 0px 0px 40px;
+	font-size:14px;
+	color:#6a6969;
+	font-family:"Verdana","Arial";
+	font-weight:normal;
+}
+
+.loginBtn{
+	height:34px;
+	display:inline-block;
+	width:113px;
+	margin-top:30px;
+	cursor:pointer;
+}
+
+.txtinput { 
+display: block;
+font-family: "Helvetica Neue", Arial, sans-serif;
+border-style: solid;
+box-shadow: 0px 0px 1px rgba(0, 0, 0, 10);
+border-width: 1px;
+margin-left:50px;
+margin-bottom:20px;
+font-size: 1em;
+padding: 4px 15px;
+padding-left:40px;
+width:70%;
+}
+
+
+.txtinput:focus
+{ 
+border-style: solid;
+border-width: 1px;
+box-shadow: 0px 0px 3px rgba(0, 0, 0, 10);
+outline: 0 none; 
+}
+
+</style>
+</head>
+
+
+
+<div class="topLogo">
+	<table cellpadding=0 cellspacing=0 width="100%">
+			<tr><td><table border="0" cellpadding="0" cellspacing="0" width="100%">
+				<td width="490" height="90" align=left background="images/bkgd-consulting-promo-2000x333.jpg" style="padding-top:0; padding-left:20;">
+					<table>
+						<tr><td class="style1">ADHOC CLOUD SOLUTIONS</td></tr>
+					</table>
+				</td></tr>
+			</table></td>
+		</table>
+	</div>
+
+	<form action="../cgi-bin/adhoclogin.py" method="post">
+	<div class="loginBox">	
+		<div class="noteDiv">
+			<span id="note"></span>
+			<span id="tip"></span>
+		</div>
+		<div class="panelThre" align="center">
+			<div align="center" class="picDiv" align="center">
+				
+				<table style="margin-top:40px;">
+				<tr>
+				<td><img src="/images/picon.png" height=20px width=20 style="position:absolute;margin-top:3px;margin-left:60px;"><input type="text" name="usr" class="txtinput" required></td>
+				</tr>
+				<tr>
+			   	<td><input type="password" name="passwd" class="txtinput" required></td></br>
+				</tr>
+				</table>
+			
+		<input type="image" src="/images/log.png" height=40px width=120px alt="Submit" style="margin-top:5px;">
+		<label id="copyright">Copyright © 2017 ADHOC NETWORKS., All Rights Reserved</label>
+    
+			</div>
+		    </div>
+
+		</div>
+
+</form>
+</body>
+</html
