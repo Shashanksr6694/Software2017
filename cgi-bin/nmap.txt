@@ -1,0 +1,9 @@
+
+Starting Nmap 6.40 ( http://nmap.org ) at 2017-05-31 18:34 IST
+Nmap scan report for 192.168.122.39
+Host is up (0.00021s latency).
+MAC Address: 52:54:00:B5:B9:F4 (QEMU Virtual NIC)
+Nmap scan report for 192.168.122.132
+Host is up (0.00030s latency).
+MAC Address: 52:54:00:6A:32:10 (QEMU Virtual NIC)
+Nmap done: 255 IP addresses (2 hosts up) scanned in 1.68 seconds
