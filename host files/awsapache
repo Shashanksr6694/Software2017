@@ -1,0 +1,5 @@
+[http_servers]
+34.211.22.150 ansible_ssh_private_key_file=/var/www/Key/key1.pem ansible_ssh_user=ec2-user
+52.34.237.138 ansible_ssh_private_key_file=/var/www/Key/key1.pem ansible_ssh_user=ec2-user
+35.167.186.183 ansible_ssh_private_key_file=/var/www/Key/key1.pem ansible_ssh_user=ec2-user
+52.40.191.175 ansible_ssh_private_key_file=/var/www/Key/key1.pem ansible_ssh_user=ec2-user
