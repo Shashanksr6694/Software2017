@@ -1,0 +1,10 @@
+---
+- hosts: http_servers
+  remote_user: ec2-user
+  sudo: yes 
+  tasks:
+  - name: stopping apache web server service 
+    service:
+      name: httpd
+      state: stopped 
+      enabled: yes

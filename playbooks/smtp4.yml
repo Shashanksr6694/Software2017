@@ -1,0 +1,34 @@
+---
+- hosts: ftp
+  remote_user: root
+  sudo: yes
+  tasks: 
+  - name: adding a share
+    lineinfile: dest=/etc/samba/smb.conf
+                regexp=''
+                insertafter=EOF
+                line='[samba]\npath = /samba\nwritable = yes\nbrowseable = yes\n'
+
+ #create ftp user and password 
+
+  - name: Create an FTP user with a nologin shell for additional security
+    command: useradd -m ftpserver -s /usr/sbin/nologin  
+
+  - name: Give password to the user
+    shell: >
+      (echo redhat; echo redhat) \
+      | passwd -s -a ftpserver
+
+  - name: Allow login access for the nologin shell
+      lineinfile: dest=/etc/shells
+                  regexp=''
+                  insertafter=EOF
+                  line='/usr/bin/nologin'
+
+  - name: restart vsftp server
+    service: name=vsftpd state=restarted
+    
+  - name: iptables flush
+    command: iptables -F
+
+

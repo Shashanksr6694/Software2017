@@ -1,0 +1,12 @@
+---
+- hosts: apache
+  remote_user: root
+  vars:
+    http_port: 80
+    max_client: 300 
+  tasks:
+  - name: stopping apache web server service 
+    service:
+      name: httpd
+      state: stopped 
+      enabled: yes

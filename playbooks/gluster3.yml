@@ -1,0 +1,11 @@
+---
+- hosts: peer
+  remote_user: root
+  tasks: 
+  - name: commands
+    command: '{{ item }}'
+    with_items:
+    - 'gluster peer probe {{ groups.probing[0] }}'
+    - 'gluster peer probe {{ groups.probing[1] }}'
+    - 'gluster peer probe {{ groups.probing[2] }}'
+

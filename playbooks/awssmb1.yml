@@ -1,0 +1,11 @@
+---
+- hosts: samba
+  remote_user: root
+  vars:
+    samba_port: 139
+    max_client: 50 
+  tasks:
+  - name: installing samba server
+    yum:
+      name: samba,samba-client,samba-client-libs,samba-common,samba-common-libs,samba-common-tools,samba-libs,samba-python,samba-winbind,samba-winbind-clients,samba-winbind-modules
+      state: latest

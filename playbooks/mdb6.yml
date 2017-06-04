@@ -1,0 +1,11 @@
+---
+- hosts: mariadb
+  remote_user: root
+  vars:
+    mariadb_port: 3306 
+    max_client: 100 
+  tasks:
+  - name: removing mariadb server
+    yum:
+      name: mariadb-server,mariadb
+      state: absent

@@ -1,0 +1,11 @@
+---
+- hosts: apache
+  remote_user: root
+  vars:
+    http_port: 80
+    max_client: 300 
+  tasks:
+  - name: removing apache web server
+    yum:
+      name: httpd
+      state: absent

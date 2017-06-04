@@ -1,0 +1,10 @@
+---
+- hosts: http_servers
+  sudo: yes
+  tasks:
+  - name: starting apache web server service 
+    service:
+      name: httpd
+      state: started 
+      enabled: yes
+

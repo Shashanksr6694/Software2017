@@ -1,0 +1,11 @@
+---
+- hosts: gluster
+  remote_user: root
+  vars:
+    max_client: 300 
+  tasks:
+  - name: installing gluster server
+    yum:
+      name: glusterfs,glusterfs-server 
+      state: latest
+

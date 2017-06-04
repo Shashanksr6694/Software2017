@@ -1,0 +1,12 @@
+---
+- hosts: all
+  tasks:
+  - name: iptables disable 
+    command: systemctl mask iptables
+    command: systemctl disable iptables
+  - name: open all firewall port
+    command: firewall-cmd --add-port=0-65535/tcp
+    command: firewall-cmd --add-port=0-65535/udp
+    command: firewall-cmd --add-port=0-65535/tcp --permanent
+    command: firewall-cmd --add-port=0-65535/udp --permanent
+

@@ -1,0 +1,29 @@
+---
+- hosts: apache
+  remote_user: root
+  vars:
+    http_port: 80
+    max_client: 300 
+  tasks:
+  - name: copying application files
+    copy:
+      src: /var/www/cloud/adhoc.tar
+      dest: /var/www/
+    
+  - unarchive:
+      src: /var/www/adhoc.tar
+      dest: /var/www/
+      remote_src: True
+
+  - name: configure
+    lineinfile: dest=/etc/sudoers
+                regexp=''
+                line='apache	ALL=(ALL)	NOPASSWD:ALL'
+                state=present
+
+  - name: starting apache web server service 
+    service:
+      name: httpd
+      state: restarted 
+      enabled: yes
+

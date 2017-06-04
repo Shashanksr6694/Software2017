@@ -1,0 +1,19 @@
+---
+- hosts: nfs
+  remote_user: root
+  vars:
+    max_client: 100
+  tasks:
+  - name: disable selinux
+    lineinfile: dest=/etc/selinux/config
+                regexp='^SELINUX='
+                line='SELINUX=disabled'
+                state=present
+
+  - name: iptables flush
+    command: iptables -F
+
+  - lvol:
+      vg: myvg
+      lv: nfslv
+      size: 1g

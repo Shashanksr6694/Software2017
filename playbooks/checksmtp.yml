@@ -1,0 +1,18 @@
+---
+- hosts: all
+  vars:
+  tasks:
+  - name: Check if httpd is running
+    shell: ps aux | grep httpd | grep -v grep
+    ignore_errors: yes
+    changed_when: false
+    register: systemctl_httpd_status
+
+  - name: Report status of httpd
+    fail:
+      msg: |
+        Service httpd is not running.
+        Return code from `grep`:
+        {{ systemctl_httpd_status.rc }}
+    when: systemctl_httpd_status.rc != 0
+

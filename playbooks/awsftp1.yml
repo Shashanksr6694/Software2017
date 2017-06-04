@@ -1,0 +1,11 @@
+---
+- hosts: ftp
+  remote_user: root
+  vars:
+    ftp_port: 21
+    max_client: 300 
+  tasks:
+  - name: installing vsftp server
+    yum:
+      name: vsftpd
+      state: latest

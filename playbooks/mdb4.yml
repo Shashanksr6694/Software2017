@@ -1,0 +1,15 @@
+---
+- hosts: mariadb
+  remote_user: root
+  sudo: yes
+  tasks: 
+    - name: bin the service to localhost
+      template: src=/etc/ansible/templates/bind.j2 dest=/etc/my.cnf owner=root group=root
+
+    - name: restart mariadb server
+      service: name=mariadb state=restarted
+
+    - name: iptables flush
+      command: iptables -F
+
+

@@ -1,0 +1,37 @@
+---
+- hosts: gluster
+  remote_user: root
+  vars:
+    max_client: 300 
+  tasks:
+  - name: starting gluster server service 
+    service:
+      name: glusterd
+      state: started 
+      enabled: yes
+
+  - name: disable selinux
+    lineinfile: dest=/etc/selinux/config
+                regexp='^SELINUX='
+                line='SELINUX=disabled'
+                state=present
+
+  - name: iptables flush
+    command: iptables -F
+
+  - lvol:
+      vg: myvg
+      lv: gfslv
+      size: 2g
+
+  - name: Create mountable dir
+    file: path=/media/gfs state=directory
+
+  - name: make sure the mount drive has a filesystem
+    filesystem: fstype=xfs dev={{ mountable_share_drive | default('/dev/myvg/gfslv') }} force=yes
+
+  - name: set mountpoints
+    mount: name=/media/gfs src={{ mountable_share_drive | default('/dev/myvg/gfslv') }} fstype=xfs state=mounted
+
+
+

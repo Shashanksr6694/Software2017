@@ -1,0 +1,38 @@
+---
+- hosts: mariadb
+  remote_user: root
+  vars:
+    mariadb_port: 3306 
+    max_client: 100 
+  tasks:
+  - name: set the sql root password
+    mysql_user: user=root
+                password=redhat
+                host=localhost
+
+  - name: config for easy access as root user
+    template: src=/etc/ansible/templates/my.cnf.j2
+              dest=/root/.my.cnf
+
+  - name: delete anonymous sql server user for localhost
+    mysql_user: user=""
+                state="absent"
+
+  - name: secure the sql root user for ipv6 localhost (::1)
+    mysql_user: user="root"
+                password="redhat"
+                host="::1"
+
+  - name: secure the sql root user for ipv4 localhost (127.0.0.1)
+    mysql_user: user="root"
+                password="redhat"
+                host="127.0.0.1"
+
+  - name: secure the sql root user for localhost domain (localhost)
+    mysql_user: user="root"
+                password="redhat"
+                host="localhost"
+
+  - name: remove the mysql test database
+    mysql_db: db=test
+              state=absent

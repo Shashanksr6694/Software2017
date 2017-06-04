@@ -1,0 +1,18 @@
+---
+- hosts: all
+  remote_user: root
+  tasks: 
+  - name: check volume status
+    shell: gluster volume status | grep -v grep
+    ignore_errors: yes
+    changed_when: false
+    register: systemctl_gluster volume status_status
+
+
+  - name: Report status of gluster volume status
+    fail:
+      msg: |
+        Volume gluster is not started
+        Return code from `grep`:
+        {{ systemctl_gluster volume_status.rc }}
+    when: systemctl_gluster volume status_status.rc != 0

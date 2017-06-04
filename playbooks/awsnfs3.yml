@@ -1,0 +1,15 @@
+---
+- hosts: nfs
+  remote_user: root
+  tasks: 
+    - name: Create mountable dir
+      file: path=/share state=directory mode=777 owner=root group=root
+
+    - name: make sure the mount drive has a filesystem
+      filesystem: fstype=xfs dev={{ mountable_share_drive | default('/dev/myvg/nfslv') }} force=yes
+
+    - name: set mountpoints
+      mount: name=/share src={{ mountable_share_drive | default('/dev/myvg/nfslv') }} fstype=xfs state=mounted
+
+
+

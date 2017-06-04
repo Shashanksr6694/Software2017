@@ -1,0 +1,16 @@
+---
+- hosts: all
+  remote_user: root
+  tasks: 
+  - name: check peer status
+    shell: gluster peer status | grep -v grep
+    ignore_errors: yes
+    changed_when: false
+    register: systemctl_gluster peer status_status
+
+  - name: Check if all the bricks have been added
+    shell: for brick in {{gluster_bricks.stdout}}; do gluster volume info {{gluster_volume}} | grep -q $brick || echo -n "$brick "; done; true
+    register: missing_bricks
+    when: inventory_hostname == groups.gluster_data[0]
+    tags:
+      - gluster

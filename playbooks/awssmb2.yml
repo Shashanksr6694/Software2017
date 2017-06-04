@@ -1,0 +1,24 @@
+---
+- hosts: samba
+  remote_user: root
+  vars:
+    samba_port: 139
+    max_client: 50 
+  tasks:
+  - name: starting samba server service 
+    service:
+      name: smb
+      state: started 
+      enabled: yes
+  - name: disable selinux
+    lineinfile: dest=/etc/selinux/config
+                regexp='^SELINUX='
+                line='SELINUX=disabled'
+                state=present
+
+  - name: iptables flush
+    command: iptables -F
+  - lvol:
+        vg: myvg
+        lv: smblv
+        size: 1g

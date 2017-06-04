@@ -1,0 +1,17 @@
+---
+- hosts: http_servers
+  remote_user: ec2-user
+  sudo: yes
+  tasks:
+  - name: installing modssl server
+    yum:
+      name: mod_ssl
+      state: latest
+  - name: iptables flush
+    command: iptables -F
+  - name: restart the apache service 
+    service:
+      name: httpd
+      state: restarted 
+      enabled: yes
+

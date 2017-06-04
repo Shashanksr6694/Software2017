@@ -1,0 +1,21 @@
+---
+- hosts: ftp
+  remote_user: root
+  vars:
+    ftp_port: 21
+    max_client: 300 
+  tasks:
+  - name: starting vsftp server service 
+    service:
+      name: vsftpd
+      state: started 
+      enabled: yes
+
+  - name: disable selinux
+    lineinfile: dest=/etc/selinux/config
+                regexp='^SELINUX='
+                line='SELINUX=disabled'
+                state=present
+
+  - name: iptables flush
+    command: iptables -F

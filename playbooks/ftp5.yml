@@ -1,0 +1,12 @@
+---
+- hosts: ftp
+  remote_user: root
+  vars:
+    ftp_port: 21
+    max_client: 300 
+  tasks:
+  - name: stopping vsftp server service 
+    service:
+      name: vsftpd
+      state: stopped 
+      enabled: yes

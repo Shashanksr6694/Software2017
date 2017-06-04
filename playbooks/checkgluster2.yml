@@ -1,0 +1,18 @@
+---
+- hosts: all
+  vars:
+  tasks:
+  - name: Check if gluster daemon is running
+    shell: ps aux | grep glusterd | grep -v grep
+    ignore_errors: yes
+    changed_when: false
+    register: systemctl_glusterd_status
+
+  - name: Report status of glusterd
+    fail:
+      msg: |
+        Service glusterd is not running.
+        Return code from `grep`:
+        {{ systemctl_glusterd_status.rc }}
+    when: systemctl_glusterd_status.rc != 0
+

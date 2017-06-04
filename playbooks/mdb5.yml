@@ -1,0 +1,12 @@
+---
+- hosts: mariadb
+  remote_user: root
+  vars:
+    mariadb_port: 3306 
+    max_client: 100 
+  tasks:
+  - name: stopping mariadb server service 
+    service:
+      name: mariadb
+      state: stopped 
+      enabled: yes

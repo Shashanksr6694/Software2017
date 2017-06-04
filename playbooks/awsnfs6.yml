@@ -1,0 +1,10 @@
+---
+- hosts: nfs
+  remote_user: root
+  vars:
+    max_client: 100
+  tasks:
+  - name: removing nfs server
+    yum:
+      name: nfs-utils
+      state: absent

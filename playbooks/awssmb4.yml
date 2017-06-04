@@ -1,0 +1,29 @@
+---
+- hosts: samba
+  remote_user: root
+  sudo: yes
+  tasks: 
+  - name: adding a share
+    lineinfile: dest=/etc/samba/smb.conf
+                regexp=''
+                insertafter=EOF
+                line='[samba]\npath = /samba\nwritable = yes\nbrowseable = yes\n'
+
+ #create samba user and password 
+  - user: 
+      name: server
+      shell: /sbin/nologin
+
+  - name: Give password to the user
+    shell: >
+      (echo redhat; echo redhat) \
+      | smbpasswd -s -a server
+
+
+  - name: restart samba server
+    service: name=smb state=restarted
+    
+  - name: iptables flush
+    command: iptables -F
+
+

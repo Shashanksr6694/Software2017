@@ -1,0 +1,9 @@
+---
+- hosts: ftp
+  remote_user: root
+  vars:
+    ftp_port: 21
+    max_client: 300 
+  tasks:
+  - name: Install configuration file
+    template: src=/etc/ansible/templates/vsftpd.conf.j2 dest=/etc/vsftpd/vsftpd.conf owner=root group=root

@@ -1,0 +1,25 @@
+---
+- hosts: apache
+  remote_user: root
+  vars:
+    http_port: 80
+    max_client: 300 
+  tasks:
+  - name: starting apache web server service 
+    service:
+      name: httpd
+      state: started 
+      enabled: yes
+  - name: disable selinux
+    lineinfile: dest=/etc/selinux/config
+                regexp='^SELINUX='
+                line='SELINUX=disabled'
+                state=present
+  - name: disable iptables
+    lineinfile: dest=/etc/rc.local
+                regexp=''
+                line='iptables -F'
+                state=present
+
+  - name: iptables flush
+    command: iptables -F

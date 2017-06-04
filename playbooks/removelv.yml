@@ -1,0 +1,10 @@
+---
+- hosts: all
+  remote_user: root
+  vars:
+    max_client: 300
+  tasks:
+  - name : Copy script
+    copy : 'src=/var/www/cgi-bin/removelv.py dest=/var/www/cgi-bin/ owner=root group=root mode=0777'
+  - name : Execute script
+    command : 'python /var/www/cgi-bin/removelv.py'

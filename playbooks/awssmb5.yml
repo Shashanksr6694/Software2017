@@ -1,0 +1,12 @@
+---
+- hosts: samba
+  remote_user: root
+  vars:
+    samba_port: 139
+    max_client: 50 
+  tasks:
+  - name: stopping samba server service 
+    service:
+      name: smb
+      state: stopped
+      enabled: yes

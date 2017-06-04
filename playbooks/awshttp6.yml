@@ -1,0 +1,9 @@
+---
+- hosts: http_servers
+  remote_user: ec2-user
+  sudo: yes
+  tasks:
+  - name: removing apache web server
+    yum:
+      name: httpd
+      state: absent

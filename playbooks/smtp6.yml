@@ -1,0 +1,10 @@
+---
+- hosts: smtp
+  remote_user: root
+  vars:
+    max_client: 300 
+  tasks:
+  - name: removing postfix server
+    yum:
+      name: postfix
+      state: absent

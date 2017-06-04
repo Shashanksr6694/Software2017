@@ -1,0 +1,16 @@
+---
+- hosts: gluster
+  remote_user: root
+  vars:
+    max_client: 300 
+  tasks:
+  - name: stopping gluster server service 
+    service:
+      name: glusterd
+      state: stopped 
+      enabled: yes
+  handlers:
+  - name: checking gluster server service status
+    service:
+      name: glusterd
+      state: stopped

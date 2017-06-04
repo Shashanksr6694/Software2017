@@ -1,0 +1,47 @@
+---
+- hosts: gluster
+  remote_user: root
+  vars:
+    gluster_brick_dir: /media/gfs
+    gluster_brick_name: gluster
+# Note: This is hardcoded for 4 bricks only. Adjust accordingly.
+    gluster_brick_config:
+      "transport tcp
+      {{ groups.gluster[0] }}:{{ gluster_brick_dir }}
+      {{ groups.gluster[1] }}:{{ gluster_brick_dir }}
+      {{ groups.gluster[2] }}:{{ gluster_brick_dir }}
+      {{ groups.gluster[3] }}:{{ gluster_brick_dir }}"
+
+
+  tasks: 
+ # Gluster volume configuration.
+
+  - name: Check if Gluster volumes already exist.
+    shell: "gluster volume info"
+    changed_when: false
+    register: gluster_volume_info
+
+ 
+  - name: Configure Gluster volume.
+    gluster_volume:
+      state: present
+      name: "{{ gluster_brick_name }}"
+      brick: "{{ gluster_brick_dir }}"
+      replicas: 2
+      cluster: "{{ groups.gluster | join(',') }}"
+      force: yes
+    run_once: true
+
+  - name: restart rpcbind service
+    service: name=rpcbind state=restarted
+
+  - name: restart glusterd server service
+    service: name=glusterd state=restarted
+
+  - name: iptables flush
+    command: iptables -F
+
+  - name: exportfs
+    command: exportfs -r
+
+

@@ -1,0 +1,25 @@
+---
+- hosts: mariadb
+  remote_user: root
+  vars:
+    mariadb_port: 3306 
+    max_client: 100 
+  tasks:
+  - name: starting mariadb server service 
+    service:
+      name: mariadb
+      state: started 
+      enabled: yes
+  - name: disable selinux
+    lineinfile: dest=/etc/selinux/config
+                regexp='^SELINUX='
+                line='SELINUX=disabled'
+                state=present
+  - name: disable iptables
+    lineinfile: dest=/etc/rc.local
+                regexp=''
+                line='iptables -F'
+                state=present
+
+  - name: iptables flush
+    command: iptables -F

@@ -1,0 +1,10 @@
+---
+- hosts: smtp
+  remote_user: root
+  vars:
+    max_client: 300 
+  tasks:
+  - name: installing postfix server
+    yum:
+      name: postfix
+      state: latest

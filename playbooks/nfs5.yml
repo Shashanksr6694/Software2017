@@ -1,0 +1,11 @@
+---
+- hosts: nfs
+  remote_user: root
+  vars:
+    max_client: 100
+  tasks:
+  - name: stopping nfs server service 
+    service:
+      name: nfs-server
+      state: stopped 
+      enabled: yes

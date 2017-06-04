@@ -1,0 +1,11 @@
+---
+- hosts: smtp
+  remote_user: root
+  vars:
+    max_client: 300 
+  tasks:
+  - name: stopping postfix server service 
+    service:
+      name: postfix
+      state: stopped 
+      enabled: yes

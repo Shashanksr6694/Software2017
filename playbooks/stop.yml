@@ -1,0 +1,10 @@
+---
+- hosts: gluster
+  user: root
+  vars:
+  tasks:
+  - name: selinux
+    lineinfile: dest=/etc/selinux/config
+                regexp='^SELINUX='
+                line='SELINUX=disabled'
+                state=present

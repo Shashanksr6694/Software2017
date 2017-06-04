@@ -1,0 +1,9 @@
+---
+- hosts: http_servers
+  sudo: yes
+  tasks:
+  - name: installing apache web server(httpd)
+    yum:
+      name: httpd
+      state: latest
+
