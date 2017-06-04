@@ -1,0 +1,60 @@
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="shortcut icon" href="images/favicon.png"/>
+<title>STORAGE CHOICES</title>
+<link rel="stylesheet" href="css/choice1.css">
+
+<style>
+#banner2{
+	padding-top:60px;
+	margin-top:0px;
+	background-image:url(../images/log.jpg);
+	text-align:center;
+	background-size:cover;
+	background-position:center;
+	height:580px;
+	width:100%;
+}
+</style>
+</head>
+
+<body>
+<div id="menu"> 
+	<ul class="list">
+	<a class="mya" href="home.html"><li>HOME</li></a>
+       	<a class="mya" href="about.html"><li>ABOUT</li></a>
+        <a class="mya" href="services.html"><li>SERVICES</li></a>
+	<a class="mya" href="monitoring.html"><li>MONITORING</li></a>
+    	<a class="mya" href="contact.html"><li>CONTACT</li></a>
+    	</ul>
+</div>
+
+
+<div id="banner3">
+<a href="about.html"><img src="images/logo1.png" height=60px class="logo"></a>
+</div>
+
+<div id='banner2'>
+
+<div class="linux1"><h2>STORAGE AUTOMATION</h2>
+<p style="text-align:justify;">Distributed Replicated Glusterfs Volume - In this volume files are distributed across replicated sets of bricks. The number of bricks must be a multiple of the replica count. Also the order in which we specify the bricks matters since adjacent bricks become replicas of each other. This type of volume is used when high availability of data due to redundancy and scaling storage is required. So if there were eight bricks and replica count 2 then the first two bricks become replicas of each other then the next two and so on. This volume is denoted as 4x2. </p></div>
+
+<form action="http://192.168.0.20/cgi-bin/choice1.py" method="POST" target="_blank">
+
+<div class='para'>
+<img src='images/gluster.png' style='margin-top:20px;' height=200px></br></br>
+<div class='para1'></div></br>
+<span class='table'>Installation ::: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='checkbox' name='gluster1'></input></span>
+<span class='table'>Service Start ::: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='checkbox' name='gluster2'></input></span>
+<span class='table'>Peer Probing ::: <input type='checkbox' name='gluster3'></input></span>
+<span class='table'>Volume Creation ::: <input type='checkbox' name='gluster4'></input></span>
+<span class='table'>Service Stop ::: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='checkbox' name='gluster5'></input></span>
+<span class='table'>Server remove ::: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='checkbox' name='gluster6'></input></span>
+<br>&nbsp;</br>
+<input type='SUBMIT' value='SUBMIT' class='button'></input>
+</div>
+</form>
+</div>
+</body>
+</html>

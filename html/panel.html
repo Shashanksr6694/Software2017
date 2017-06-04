@@ -1,0 +1,125 @@
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="shortcut icon" href="images/favicon.png"/>
+<title>PANEL</title>
+<link rel="stylesheet" href="css/panel.css">
+
+<style>
+#banner2{
+	margin-top:0px;
+	background-image:url(../images/log.jpg);
+	text-align:center;
+	background-size:cover;
+	background-position:center;
+	width:100%;
+}
+</style>
+</head>
+
+<body>
+
+<div id="menu"> 
+	<ul class="list">
+	<a class="mya" href="home.html"><li>HOME</li></a>
+       	<a class="mya" href="about.html"><li>ABOUT</li></a>
+        <a class="mya" href="services.html"><li>SERVICES</li></a>
+	<a class="mya" href="monitoring.html"><li>MONITORING</li></a>
+    	<a class="mya" href="contact.html"><li>CONTACT</li></a>
+    	</ul>
+</div>
+
+
+<div id="banner3">
+<a href="about.html"><img src="images/logo1.png" height=60px class="logo"></a>
+</div>
+
+<div id="banner2">
+<form action="http://192.168.0.20/cgi-bin/panel.py" method="POST" target="_blank">
+
+<div class='dpara'>
+
+<img src='images/server1.png' style='margin-top:20px;' height=150px ></br></br>
+
+<div class='para1'></div></br>
+<span class='table'>Check Service ::: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='checkbox' name='checkhttp1'></input></span>
+<span class='table'>Service Start ::: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='checkbox' name='checkhttp2'></input></span>
+<span class='table'>Open Webpage ::: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='checkbox' name='checkhttp3'></input></span>
+<span class='table'>Secure Webpage ::: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='checkbox' name='checkhttp4'></input></span>
+
+<br>&nbsp;</br>
+</div>
+
+<div class='para'>
+<img src='images/server2.png' style='margin-top:20px;' height=150px></br></br>
+
+<div class='para1'></div></br>
+<span class='table'>Check Service ::: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='checkbox' name='checkmdb1'></input></span>
+<span class='table'>Service Start ::: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='checkbox' name='checkmdb2'></input></span>
+
+
+<br>&nbsp;</br>
+</div>
+
+
+<div class='para'>
+<img src='images/server3.png' style='margin-top:20px;' height=150px></br></br>
+<div class='para1'></div></br>
+<span class='table'>Check Service ::: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='checkbox' name='checknfs1'></input></span>
+<span class='table'>Service Start ::: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='checkbox' name='checknfs2'></input></span>
+
+<br>&nbsp;</br>
+</div>
+
+</br></br></br></br>
+
+<div class='dpara'>
+<img src='images/server4.png' style='margin-top:20px;' height=150px></br></br>
+<div class='para1'></div></br>
+<span class='table'>Check Service ::: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='checkbox' name='checksmb1'></input></span>
+<span class='table'>Service Start ::: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='checkbox' name='checksmb2'></input></span>
+
+<br>&nbsp;</br>
+</div>
+
+
+<div class='para'>
+<img src='images/smtp.png' style='margin-top:20px;' height=150px></br></br>
+<div class='para1'></div></br>
+<span class='table'>Check Service ::: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='checkbox' name='checksmtp1'></input></span>
+<span class='table'>Service Start ::: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='checkbox' name='checksmtp2'></input></span>
+
+<br>&nbsp;</br>
+</div>
+
+
+
+<div class='para'>
+<img src='images/ftp.png' style='margin-top:20px;' height=150px></br></br>
+<div class='para1'></div></br>
+<span class='table'>Check Service ::: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='checkbox' name='checkftp1'></input></span>
+<span class='table'>Service Start ::: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='checkbox' name='checkftp2'></input></span>
+
+<br>&nbsp;</br>
+</div>
+
+
+
+<div class='para'>
+<img src='images/gluster.png' style='margin-top:20px;' height=150px></br></br>
+<div class='para1'></div></br>
+<span class='table'>Check Service ::: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='checkbox' name='checkgluster1'></input></span>
+<span class='table'>Service Start ::: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='checkbox' name='checkgluster2'></input></span>
+<span class='table'>Gluster Peer Status ::: &nbsp;<input type='checkbox' name='checkgluster3'></input></span>
+<span class='table'>Gluster Volume Info ::: <input type='checkbox' name='checkgluster4'></input></span>
+
+<br>&nbsp;</br>
+</div>
+
+<input type='SUBMIT' value='SUBMIT' class='button'></input>
+
+</form>
+
+</div>
+</body>
+</html>

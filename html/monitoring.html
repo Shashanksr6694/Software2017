@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+<head>
+<link rel="shortcut icon" href="images/favicon.png"/>
+<meta charset="utf-8">
+<title>ADMIN MONITORING</title>
+<link rel="stylesheet" href="css/monitoring.css">
+</head>
+<style>
+	h7{
+	position:absolute;
+	margin-top:120px;
+	line-height:150%;
+        margin-left:-450px;
+	font-weight: 100;
+	text-align:center;
+	font-weight:700;
+	font-size:20px;
+	font-family: "proxima-nova", Helvetica, Arial, sans-serif;
+	color:white;
+	width:80%;
+}
+
+h4{
+	position:absolute;
+	margin-top:260px;
+	text-align:center;
+	margin-left:180px;
+	line-height:150%;
+	font-size:30px;
+	font-weight:900;
+	font-family:'Open Sans', sans-serif;
+	color:white;
+}
+h3{
+	position:absolute;
+	margin-top:120px;
+	text-align:center;
+	margin-left:180px;
+	font-size:25px;
+	font-weight:900;
+	width:63%;
+	font-family:'Open Sans', sans-serif;
+	color:white;
+}
+
+h5{	
+	font-family:'Open Sans', sans-serif;
+	color:white;
+	margin-top:5px;
+	font-size:40px;
+	text-align:center;
+}
+
+</style>
+<body>
+<div id="menu"> 
+	<ul class="list">
+	<a class="mya" href="home.html"><li>HOME</li></a>
+       	<a class="mya" href="about.html"><li>ABOUT</li></a>
+        <a class="mya" href="services.html"><li>SERVICES</li></a>
+	<a class="mya" href="monitoring.html"><li>MONITORING</li></a>
+    	<a class="mya" href="contact.html"><li>CONTACT</li></a>
+    	</ul>
+
+</div>
+
+<div id="banner3">
+<a href="about.html"><img src="images/logo1.png" height=60px class="logo"></a>
+</div>
+<div class="super-diamond" style="width: 630px;height: 630px;right: -315px;top: -315px;background-color:black;">
+</div>
+<div id="banner8">
+<div class="box4">
+<h1 class="s1">Monitoring Panel</h1>
+<div class="box3">
+<h5>MONITOR EVERYTHING !</h5>
+</div>
+<style>
+h2{
+	position:absolute;
+	margin-top:169.5px;
+	margin-left:519px;
+	font-size:35px;
+	font-weight:900;
+	font-family:'Open Sans', sans-serif;
+	background: rgba(41,41,43,0.81);
+	height:400px;
+	width:62%;
+	color:white;
+}
+</style><h2>WHY MONITORING ?</h2>
+<div class="hadoop">
+<div class="para para1">
+<p class="info">
+When deploying applications or changing configurations, you want to make sure the playbooks you scheduled were properly executed. You also want to know if some of them failed or took an abnormally long time to run. </br> </br> If not properly defined, deployments can impact some applications’ performance. That’s why you also want to be able to correlate these insights with performance metrics from the different parts of your infrastructure.
+</p>
+</div>
+</div>
+
+<section id="container">
+	<form action="http://192.168.0.20/cgi-bin/adminlogin.py" method="POST" style="width:30%; float:left ; padding-left:6%;"> 
+	<fieldset>
+		<legend style="font-size:30px; font-family:Arial; color:white;">Login</legend>
+		<table>
+			<tr>
+			<td><input type="text" name="usr"  placeholder="Enter user name" class="txtinput" required></td>
+			</tr>
+			<tr>
+		   	<td><input type="password" name="passwd"  placeholder="Enter password" class="txtinput" required></td></br>
+			</tr>
+		</table>
+		<section id="buttons">
+			<input type="reset" name="reset" id="resetbtn" class="button" value="Reset">&nbsp;&nbsp;&nbsp;
+			<input type="submit" name="submit" id="submitbtn" class="button" tabindex="7" value="Login">
+			<br style="clear:both;">
+		</section>
+	</fieldset>
+	</form>
+</section>
+</div>
+</div>
+</div>
+
+</body>
+</html>

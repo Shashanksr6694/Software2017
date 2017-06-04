@@ -1,0 +1,133 @@
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="shortcut icon" href="images/favicon.png"/>
+<title>SERVERS CHOICES</title>
+<link rel="stylesheet" href="css/choice.css">
+
+<style>
+#banner2{
+	margin-top:0px;
+	background-image:url(../images/log.jpg);
+	text-align:center;
+	background-size:cover;
+	background-position:center;
+	width:100%;
+}
+</style>
+</head>
+
+<body>
+
+<div id="menu"> 
+	<ul class="list">
+	<a class="mya" href="home.html"><li>HOME</li></a>
+       	<a class="mya" href="about.html"><li>ABOUT</li></a>
+        <a class="mya" href="services.html"><li>SERVICES</li></a>
+	<a class="mya" href="monitoring.html"><li>MONITORING</li></a>
+    	<a class="mya" href="contact.html"><li>CONTACT</li></a>
+    	</ul>
+</div>
+
+
+<div id="banner3">
+<a href="about.html"><img src="images/logo1.png" height=60px class="logo"></a>
+</div>
+
+<div id="banner2">
+<form action="http://192.168.0.20/cgi-bin/choice.py" method="POST" target="_blank">
+
+<div class='dpara'>
+
+<img src='images/server1.png' style='margin-top:20px;' height=150px ></br></br>
+
+<div class='para1'></div></br>
+<span class='table'>Installation ::: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='checkbox' name='http1'></input></span>
+<span class='table'>Service Start ::: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='checkbox' name='http2'></input></span>
+<span class='table'>Host Application ::: <input type='checkbox' name='http3'></input></span>
+<span class='table'>Use SSL/TLS ::: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='checkbox' name='http4'></input></span>
+<span class='table'>Service Stop ::: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='checkbox' name='http5'></input></span>
+<span class='table'>Server remove ::: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='checkbox' name='http6'></input></span>
+
+<br>&nbsp;</br>
+</div>
+
+<div class='para'>
+<img src='images/server2.png' style='margin-top:20px;' height=150px></br></br>
+
+<div class='para1'></div></br>
+<span class='table'>Installation ::: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='checkbox' name='mdb1'></input></span>
+<span class='table'>Service Start ::: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='checkbox' name='mdb2'></input></span>
+<span class='table'>Security ::: <input type='checkbox' name='mdb3'></input></span>
+<span class='table'>Configuration  ::: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='checkbox' name='mdb4'></input></span>
+<span class='table'>Service Stop ::: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='checkbox' name='mdb5'></input></span>
+<span class='table'>Server remove ::: &nbsp;&nbsp;&nbsp;&nbsp;<input type='checkbox' name='mdb6'></input></span>
+
+<br>&nbsp;</br>
+</div>
+
+
+<div class='para'>
+<img src='images/server3.png' style='margin-top:20px;' height=150px></br></br>
+<div class='para1'></div></br>
+<span class='table'>Installation ::: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='checkbox' name='nfs1'></input></span>
+<span class='table'>Service Start ::: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='checkbox' name='nfs2'></input></span>
+<span class='table'>Configuration ::: <input type='checkbox' name='nfs3'></input></span>
+<span class='table'>Sharing ::: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='checkbox' name='nfs4'></input></span>
+<span class='table'>Service Stop ::: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='checkbox' name='nfs5'></input></span>
+<span class='table'>Server remove ::: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='checkbox' name='nfs6'></input></span>
+
+<br>&nbsp;</br>
+</div>
+
+</br></br></br></br>
+
+<div class='dpara'>
+<img src='images/server4.png' style='margin-top:20px;' height=150px></br></br>
+<div class='para1'></div></br>
+<span class='table'>Installation ::: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='checkbox' name='smb1'></input></span>
+<span class='table'>Service Start ::: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='checkbox' name='smb2'></input></span>
+<span class='table'>Configuration ::: <input type='checkbox' name='smb3'></input></span>
+<span class='table'>Sharing :::  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='checkbox' name='smb4'></input></span>
+<span class='table'>Service Stop ::: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='checkbox' name='smb5'></input></span>
+<span class='table'>Server remove ::: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='checkbox' name='smb6'></input></span>
+<br>&nbsp;</br>
+</div>
+
+
+<div class='para'>
+<img src='images/smtp.png' style='margin-top:20px;' height=150px></br></br>
+<div class='para1'></div></br>
+<span class='table'>Installation ::: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='checkbox' name='smtp1'></input></span>
+<span class='table'>Service Start ::: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='checkbox' name='smtp2'></input></span>
+<span class='table'>Configuration ::: <input type='checkbox' name='smtp3'></input></span>
+<span class='table'>Security :::  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='checkbox' name='smtp4'></input></span>
+<span class='table'>Service Stop ::: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='checkbox' name='smtp5'></input></span>
+<span class='table'>Server remove ::: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='checkbox' name='smtp6'></input></span>
+<br>&nbsp;</br>
+</div>
+
+
+
+<div class='para'>
+<img src='images/ftp.png' style='margin-top:20px;' height=150px></br></br>
+<div class='para1'></div></br>
+<span class='table'>Installation ::: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='checkbox' name='ftp1'></input></span>
+<span class='table'>Service Start ::: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='checkbox' name='ftp2'></input></span>
+<span class='table'>Configuration ::: <input type='checkbox' name='ftp3'></input></span>
+<span class='table'>Security :::  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='checkbox' name='ftp4'></input></span>
+<span class='table'>Service Stop ::: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='checkbox' name='ftp5'></input></span>
+<span class='table'>Server remove ::: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='checkbox' name='ftp6'></input></span>
+<br>&nbsp;</br>
+</div>
+
+
+
+
+<input type='SUBMIT' value='SUBMIT' class='button'></input>
+
+</form>
+
+</div>
+</body>
+</html>
