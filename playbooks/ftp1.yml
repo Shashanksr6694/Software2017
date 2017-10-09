@@ -1,11 +1,12 @@
 ---
-- hosts: localhost
+- hosts: all
+  become: true
   become_user: root
   vars:
     ftp_port: 21
-    max_client: 300 
+    max_client: 300
   tasks:
   - name: installing vsftp server
     yum:
       name: vsftpd
-      state: latest
+      state: present
