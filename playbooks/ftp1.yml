@@ -1,5 +1,6 @@
 ---
 - hosts: all
+  connection: local
   remote_user: root
   vars:
     ftp_port: 21
